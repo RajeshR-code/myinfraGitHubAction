@@ -5,12 +5,18 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
       - name: AzurePortalLoginKro
         run: az login --service-principal --username 4b03f620-6992-420f-adab-7ba40c994fba --password kpf8Q~ZRu3CorveFbRfqDmw7FmPVqcT30YipvbOb --tenant 3949c5f3-3967-44d0-829c-5c37e224be74
       - name: Accountshowkro
         run: az account show
+      - name: wherearewe
+        run: pwd
+      - name: showconfigurationfile
+        run: ls -la
 
       - name: terraform_init
         run: terraform init
