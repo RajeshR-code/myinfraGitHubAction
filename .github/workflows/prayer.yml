@@ -1,0 +1,11 @@
+name: prayer
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    
+    runs-on: self-hosted
+    steps:
+      - name: maikonhumalik
+        run: whoami
+
