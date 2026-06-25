@@ -11,3 +11,9 @@ jobs:
         run: az login --service-principal --username 4b03f620-6992-420f-adab-7ba40c994fba --password kpf8Q~ZRu3CorveFbRfqDmw7FmPVqcT30YipvbOb --tenant 3949c5f3-3967-44d0-829c-5c37e224be74
       - name: Accountshowkro
         run: az account show
+
+      - name: terraform_init
+        run: terraform init
+       
+      - name: terraform_apply
+        run: terraform apply --auto-approve
